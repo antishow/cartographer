@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cartographer HTML Image Map Generator</title>
+	<script src="js/jquery-1.7.2.min.js"></script>
+	<script src="js/jquery-ui-1.8.21.custom.min.js"></script>
+	<script src="js/easymap.js"></script>
+	<script src="js/vector.js"></script>
+	<link rel="stylesheet" href="css/ui-lightness/jquery-ui-1.8.21.custom.css">
+	<link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Berkshire+Swash'type='text/css'>
+	<link rel="stylesheet" href="css/screen.css">
+</head>
+<body>
+<div id="root">
+	
+	<div id="header">
+		<h1>Cartographer</h1>
+		<h2>HTML Image Maps made easy</h2>
+	</div>
+	
+	<div id="toolbar">
+	<div class="button-set">
+		<button id="image-select-button" class="dialog icon-image">Set Image URL</button>
+		<button id="configure-map-button" class="dialog icon-gear">Configure Map Attributes</button>
+	</div>
+	<div class="button-set">
+		<button id="select-tool-button" class="tool icon-arrow">Select an Area</button>
+		<button id="rect-tool-button" class="tool icon-stop">Rectangle</button>
+		<button id="circle-tool-button" class="tool icon-bullet">Circle</button>
+		<button id="poly-tool-button" class="tool icon-star">Polygon</button>
+	</div>
+	</div>
+	
+	<div id="stage">
+		<div id="image-display">
+			<img src="" alt="Get started by entering the URL for the image you're creating a map for" alt="Get started by entering the URL for the image you're creating a map for">
+			<canvas id="area-canvas"></canvas>
+		</div>
+	</div>
+	
+	<div id="area-list">
+		areas are listed here.
+	</div>
+	
+	<div id="source-code">
+	
+	</div>
+	
+	<div id="dialogs">
+	
+		<div id="image-locator">
+			<div class="form-item wide">
+				<label for="image-url-input">Enter the URL of the image you want to create a map for:</label>
+				<div class="input">
+					<input id="image-url-input" name="image_url" type="text" value="">
+				</div>
+			</div>
+		</div>
+		
+		<div id="map-settings">
+			<div class="form-item">
+				<label for="map-id-input">Map ID</label>
+				<div class="input">
+					<input id="id-input" name="id" type="text" value="map">
+				</div>
+			</div>
+			<div class="form-item">
+				<label for="default-input">Default Link</label>
+				<div class="input">
+					<input id="default-input" name="default_link" type="text" value="">
+				</div>
+			</div>
+		</div>
+		
+		<div id="area-settings">
+			<div class="form-item">
+				<label for="href-input">Link</label>
+				<div class="input">
+					<input id="href-input" name="href" type="text" value="#">
+				</div>
+			</div>
+			<div class="form-item">
+				<label for="title-input">Title</label>
+				<div class="input">
+					<input id="title-input" name="title" type="text" value="">
+				</div>
+			</div>
+		</div>
+		
+	</div>
+</div>
+</body>
+</html>

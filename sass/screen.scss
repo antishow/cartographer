@@ -1,0 +1,224 @@
+// This import applies a global reset to any page that imports this stylesheet.
+@import "blueprint/reset";
+
+// To configure blueprint, edit the partials/_base.sass file.
+@import "partials/base";
+
+// Import all the default blueprint modules so that we can access their mixins.
+@import "blueprint";
+
+// Import the non-default scaffolding module.
+@import "blueprint/scaffolding";
+
+
+@import "blueprint/liquid";
+@import "compass/css3/border-radius";
+@import "compass/css3/box-shadow";
+@import "compass/css3/text-shadow";
+@import "compass/typography/vertical_rhythm";
+
+// Generate the blueprint framework according to your configuration:
+@include blueprint;
+@include blueprint-liquid-grid;
+@include blueprint-scaffolding;
+
+@include establish-baseline;
+
+BODY{
+	font-family: "Lucida Grande", "Helvetica Neue", "Helvetica", "sans-serif";
+	background-image: url('images/main_bg.png');
+	background-attachment: fixed;
+	background-position: top center;
+}
+
+#root{
+	@include container;
+	@include border-radius();
+	@include box-shadow();
+	background: white;
+	margin: 1em auto;
+	padding: 1em;
+}
+
+#header{
+	@include column(24);
+	
+	H1{
+		@include single-text-shadow(#555, 1px, 1px);
+		font-size: 60px;
+		font-weight: bold;
+		font-family: 'Berkshire Swash', cursive;
+		margin-bottom: 0;
+		color: #9D7E05;
+	}
+	
+	H2{
+		@include adjust-font-size-to(24px);
+		font-family: 'Berkshire Swash', cursive;
+		font-weight: bold;
+		font-style: italic;
+		color: #514413;
+		margin-top: 0;
+	}
+}
+
+#toolbar{
+	@include column(1.5);
+	@include border-radius();
+	
+	text-align: center;
+	min-width: 20px;
+	
+	BUTTON{
+		margin: 0;
+	}
+	
+	.button-set{
+		margin-bottom: 6px;
+		
+		BUTTON{
+			@include border-radius(0);
+			border-top: none;
+		}
+	
+		BUTTON:first-child{
+			@include border-top-left-radius(5px);
+			@include border-top-right-radius(5px);
+			border-top: solid #ccc 1px;
+		}
+	
+		BUTTON:last-child{
+			@include border-bottom-left-radius(5px);
+			@include border-bottom-right-radius(5px);
+		}
+		
+		BUTTON.active-tool > .ui-button-text{
+			background-color: #ddd;
+		}
+	}
+}
+
+#stage{
+	@include border-radius();
+	@include single-box-shadow(#000, 0, 0, 8px, false, true);
+	@include column(17.5);
+	background-color: #808080;
+	text-align: center;
+	overflow: auto;
+}
+
+#image-display{
+	margin: 1em;
+	background-color: white;
+	background-image: url('images/checkerboard.gif');
+	display: inline-block;
+	position: relative;
+	cursor: crosshair;
+	
+	CANVAS{
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+}
+
+#area-list{
+	@include column(5, true);
+	@include border-radius(4px);
+	border: solid #eee 1px;
+	min-height: 4px;
+	
+	.area{
+		cursor: pointer;
+		margin: 2px;
+		padding: 4px 4px 4px 26px;
+		position: relative;
+		
+		.ui-icon{
+			@include border-radius(4px);
+			border: solid #808080 1px;
+			position: absolute;
+			top: 5px;
+			left: 4px;
+			width: 16px;
+			height: 16px;
+		}
+		
+		&.grey .ui-icon{
+			background-color: rgba(40,40,40, 0.5)
+		}
+		&.red .ui-icon{
+			background-color: rgba(255,0,0, 0.5)
+		}
+		&.green .ui-icon{
+			background-color: rgba(0,255,0, 0.5)
+		}
+		&.blue .ui-icon{
+			background-color: rgba(0,0,255, 0.5)
+		}
+		&.yellow .ui-icon{
+			background-color: rgba(255,255,0, 0.5)
+		}
+		&.cyan .ui-icon{
+			background-color: rgba(0,255,255, 0.5)
+		}
+		&.purple .ui-icon{
+			background-color: rgba(255,0,255, 0.5)
+		}
+	}
+}
+
+#source-code{
+	@include column(24, true);
+	margin-top: $base-line-height;
+	
+	CODE{
+		@include border-radius();
+		@include single-box-shadow(#000, 0, 0, 8px, false, true);
+		display: block;
+		white-space: pre;
+		color: #eee;
+		background-color: #333;
+		padding: 1em;
+		overflow: hidden;
+	}
+}
+
+
+#dialogs{
+	display: none;
+}
+	
+.form-item{
+	width: 100%;
+	
+	> *{
+		display: inline-block;
+	}
+	
+	LABEL{
+		width: 25%;
+		margin-right: 4%;
+		text-align: right;
+	}
+	
+	.input{
+		width: 70%;
+		
+		INPUT{
+			width: 100%;
+		}
+	}
+}
+	
+.form-item.wide{
+	LABEL{
+		text-align: left;
+		width: 98%;
+		margin: none;
+	}
+	
+	.input{
+		width: 98%;
+	}
+}
