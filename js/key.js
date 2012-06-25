@@ -1,0 +1,7 @@
+Key = function()
+{
+	
+}
+
+$(function(){
+});

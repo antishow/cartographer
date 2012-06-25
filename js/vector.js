@@ -74,12 +74,29 @@ Vector.prototype.midpoint = function(V)
 
 Vector.prototype.left_normal = function()
 {
-	return new Vector(this.y,-this.x);
+	return new Vector(this.y, -this.x);
 }
 
 Vector.prototype.right_normal = function()
 {
-	return new Vector(-this.y,this.x);
+	return new Vector(-this.y, this.x);
+}
+
+Vector.prototype.dot_product = function(V)
+{
+	return (this.x * V.x) + (this.y * V.y);
+}
+
+Vector.prototype.cross_product = function(V)
+{
+	// This isn't a *real* cross product since 
+	// you need 3 or more dimensions and these
+	// are strictly 2d. This returns the magnitude
+	// of what the *actual* cross-product would be 
+	// if the two vectors were 3d, with z values
+	// of zero.
+	
+	return (this.x * V.y) - (this.y * V.x);
 }
 
 Vector.prototype.to_array = function()

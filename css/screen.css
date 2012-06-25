@@ -2396,15 +2396,16 @@ BODY {
   display: inline-block;
   position: relative;
   cursor: crosshair;
+  line-height: 0;
 }
-/* line 118, ../sass/screen.scss */
+/* line 119, ../sass/screen.scss */
 #image-display CANVAS {
   position: absolute;
   top: 0;
   left: 0;
 }
 
-/* line 125, ../sass/screen.scss */
+/* line 126, ../sass/screen.scss */
 #area-list {
   display: inline;
   float: left;
@@ -2419,14 +2420,14 @@ BODY {
   border: solid #eee 1px;
   min-height: 4px;
 }
-/* line 131, ../sass/screen.scss */
+/* line 132, ../sass/screen.scss */
 #area-list .area {
   cursor: pointer;
   margin: 2px;
   padding: 4px 4px 4px 26px;
   position: relative;
 }
-/* line 137, ../sass/screen.scss */
+/* line 138, ../sass/screen.scss */
 #area-list .area .ui-icon {
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
@@ -2440,36 +2441,36 @@ BODY {
   width: 16px;
   height: 16px;
 }
-/* line 147, ../sass/screen.scss */
+/* line 148, ../sass/screen.scss */
 #area-list .area.grey .ui-icon {
   background-color: rgba(40, 40, 40, 0.5);
 }
-/* line 150, ../sass/screen.scss */
+/* line 151, ../sass/screen.scss */
 #area-list .area.red .ui-icon {
   background-color: rgba(255, 0, 0, 0.5);
 }
-/* line 153, ../sass/screen.scss */
+/* line 154, ../sass/screen.scss */
 #area-list .area.green .ui-icon {
   background-color: rgba(0, 255, 0, 0.5);
 }
-/* line 156, ../sass/screen.scss */
+/* line 157, ../sass/screen.scss */
 #area-list .area.blue .ui-icon {
   background-color: rgba(0, 0, 255, 0.5);
 }
-/* line 159, ../sass/screen.scss */
+/* line 160, ../sass/screen.scss */
 #area-list .area.yellow .ui-icon {
   background-color: rgba(255, 255, 0, 0.5);
 }
-/* line 162, ../sass/screen.scss */
+/* line 163, ../sass/screen.scss */
 #area-list .area.cyan .ui-icon {
   background-color: rgba(0, 255, 255, 0.5);
 }
-/* line 165, ../sass/screen.scss */
+/* line 166, ../sass/screen.scss */
 #area-list .area.purple .ui-icon {
   background-color: rgba(255, 0, 255, 0.5);
 }
 
-/* line 171, ../sass/screen.scss */
+/* line 172, ../sass/screen.scss */
 #source-code {
   display: inline;
   float: left;
@@ -2478,7 +2479,7 @@ BODY {
   margin-right: 0;
   margin-top: 20px;
 }
-/* line 175, ../sass/screen.scss */
+/* line 176, ../sass/screen.scss */
 #source-code CODE {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -2496,39 +2497,38 @@ BODY {
   overflow: hidden;
 }
 
-/* line 188, ../sass/screen.scss */
+/* line 189, ../sass/screen.scss */
 #dialogs {
   display: none;
 }
 
-/* line 192, ../sass/screen.scss */
+/* line 193, ../sass/screen.scss */
 .form-item {
   width: 100%;
 }
-/* line 195, ../sass/screen.scss */
+/* line 196, ../sass/screen.scss */
 .form-item > * {
   display: inline-block;
 }
-/* line 199, ../sass/screen.scss */
+/* line 200, ../sass/screen.scss */
 .form-item LABEL {
-  width: 25%;
+  width: 20%;
   margin-right: 4%;
   text-align: right;
 }
-/* line 205, ../sass/screen.scss */
+/* line 206, ../sass/screen.scss */
 .form-item .input {
-  width: 70%;
+  width: 74%;
 }
-/* line 208, ../sass/screen.scss */
+/* line 209, ../sass/screen.scss */
 .form-item .input INPUT {
   width: 100%;
 }
-
 /* line 215, ../sass/screen.scss */
 .form-item.wide LABEL {
   text-align: left;
   width: 98%;
-  margin: none;
+  margin-right: none;
 }
 /* line 221, ../sass/screen.scss */
 .form-item.wide .input {

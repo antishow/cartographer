@@ -2,12 +2,24 @@
 <html>
 <head>
 	<title>Cartographer HTML Image Map Generator</title>
+	<script src="js/vector.js"></script>
 	<script src="js/jquery-1.7.2.min.js"></script>
 	<script src="js/jquery-ui-1.8.21.custom.min.js"></script>
-	<script src="js/easymap.js"></script>
-	<script src="js/vector.js"></script>
+	<script src="js/cartographer.js"></script>
+	<script src="js/stage.js"></script>
+	<script src="js/area_list.js"></script>
+	<script src="js/draw_tool.js"></script>
+	<script src="js/select_tool.js"></script>
+	<script src="js/rectangle_tool.js"></script>
+	<script src="js/circle_tool.js"></script>
+	<script src="js/polygon_tool.js"></script>
+	<script src="js/toolbar.js"></script>
+	<script src="js/rectangle_area.js"></script>
+	<script src="js/circle_area.js"></script>
+	<script src="js/polygon_area.js"></script>
+	<script src="js/draw_controller.js"></script>
 	<link rel="stylesheet" href="css/ui-lightness/jquery-ui-1.8.21.custom.css">
-	<link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Berkshire+Swash'type='text/css'>
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Berkshire+Swash" type="text/css">
 	<link rel="stylesheet" href="css/screen.css">
 </head>
 <body>
@@ -20,8 +32,8 @@
 	
 	<div id="toolbar">
 	<div class="button-set">
-		<button id="image-select-button" class="dialog icon-image">Set Image URL</button>
-		<button id="configure-map-button" class="dialog icon-gear">Configure Map Attributes</button>
+		<button id="image-select-button" class="dialog icon-image" data-dialog="image-locator">Set Image URL</button>
+		<button id="configure-map-button" class="dialog icon-gear" data-dialog="map-settings">Configure Map Attributes</button>
 	</div>
 	<div class="button-set">
 		<button id="select-tool-button" class="tool icon-arrow">Select an Area</button>
@@ -39,15 +51,12 @@
 	</div>
 	
 	<div id="area-list">
-		areas are listed here.
 	</div>
 	
 	<div id="source-code">
-	
 	</div>
 	
 	<div id="dialogs">
-	
 		<div id="image-locator">
 			<div class="form-item wide">
 				<label for="image-url-input">Enter the URL of the image you want to create a map for:</label>

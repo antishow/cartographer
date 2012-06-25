@@ -114,6 +114,7 @@ BODY{
 	display: inline-block;
 	position: relative;
 	cursor: crosshair;
+	line-height: 0;
 	
 	CANVAS{
 		position: absolute;
@@ -197,28 +198,28 @@ BODY{
 	}
 	
 	LABEL{
-		width: 25%;
+		width: 20%;
 		margin-right: 4%;
 		text-align: right;
 	}
 	
 	.input{
-		width: 70%;
+		width: 74%;
 		
 		INPUT{
 			width: 100%;
 		}
 	}
-}
 	
-.form-item.wide{
-	LABEL{
-		text-align: left;
-		width: 98%;
-		margin: none;
-	}
-	
-	.input{
-		width: 98%;
+	&.wide{
+		LABEL{
+			text-align: left;
+			width: 98%;
+			margin-right: none;
+		}
+		
+		.input{
+			width: 98%;
+		}
 	}
 }
